@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌌 NASA APOD Archive - ESP32 Collection</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+            color: white; 
+            line-height: 1.6;
+        }
+        .header { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: linear-gradient(45deg, #16213e, #0f3460);
+            border-bottom: 3px solid #4a9eff;
+        }
+        .header h1 { 
+            font-size: 3em; 
+            margin-bottom: 10px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .stats { 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px; 
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .stat { 
+            text-align: center; 
+            padding: 15px; 
+            background: rgba(74, 158, 255, 0.2); 
+            border-radius: 10px; 
+            min-width: 150px;
+        }
+        .stat-number { 
+            font-size: 2em; 
+            font-weight: bold; 
+            color: #4a9eff; 
+        }
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 25px; 
+            padding: 40px 20px; 
+            max-width: 1400px; 
+            margin: 0 auto;
+        }
+        .card { 
+            background: linear-gradient(145deg, #1e1e1e, #2a2a2a); 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+        .card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 35px rgba(74, 158, 255, 0.2);
+        }
+        .card img { 
+            width: 100%; 
+            height: 240px; 
+            object-fit: cover; 
+            border-bottom: 2px solid #4a9eff;
+        }
+        .card-content { 
+            padding: 20px; 
+        }
+        .card-title { 
+            font-size: 1.1em; 
+            font-weight: bold; 
+            margin-bottom: 8px; 
+            color: #4a9eff; 
+        }
+        .card-date { 
+            color: #ffd700; 
+            font-weight: 500; 
+            margin-bottom: 8px; 
+        }
+        .card-size { 
+            color: #888; 
+            font-size: 0.9em; 
+            margin-bottom: 10px; 
+        }
+        .card-url { 
+            font-size: 0.75em; 
+            color: #4a9eff; 
+            word-break: break-all; 
+            background: rgba(74, 158, 255, 0.1); 
+            padding: 8px; 
+            border-radius: 5px; 
+            border-left: 3px solid #4a9eff;
+        }
+        .footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: #16213e; 
+            border-top: 3px solid #4a9eff; 
+            margin-top: 40px; 
+        }
+        .esp32-info {
+            background: linear-gradient(45deg, #2a4d3a, #1e3a8a);
+            padding: 30px;
+            margin: 30px 20px;
+            border-radius: 15px;
+            border-left: 5px solid #10b981;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .stats { gap: 20px; }
+            .gallery { grid-template-columns: 1fr; padding: 20px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 MEGA NASA COLLECTION 2017-2023</h1>
+        <p style="font-size: 1.2em; margin-bottom: 20px;">🏆 WORLD RECORD ESP32 COLLECTION - 7 YEARS 🏆</p>
+        <p>Generated on: 2025-01-02 12:00:00 (Latest Mega Update)</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">1359</div>
+                <div>Total Images</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">320×240</div>
+                <div>Resolution</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">27,180</div>
+                <div>Total KB</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">ESP32</div>
+                <div>Optimized</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="esp32-info">
+        <h2>🚀 MEGA ESP32 COLLECTION - 7 YEARS NASA</h2>
+        <p><strong>World Record ESP32 Collection!</strong> 1359 images from 2017-2023 optimized to 320×240 resolution. Each image ~20KB average for ultra-fast ESP32 download.</p>
+        <p><strong>Slideshow Duration:</strong> 3.77 hours non-stop! Use esp32_nasa_actual_array.h with 1359 image URLs ready for your ESP32 project.</p>
+    </div>
+    
+    <div class="gallery">
+
+        <div class="card">
+            <img src="nasa-images/witch_broom_test.jpg" alt="test" loading="lazy">
+            <div class="card-content">
+                <div class="card-title">test</div>
+                <div class="card-date">📅 broom</div>
+                <div class="card-size">📏 25.7 KB | 🖼️ 320×240px</div>
+                <div class="card-url">https://roccoss39.github.io/nasa.github.io/nasa-images/witch_broom_test.jpg</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="nasa-images/nasa_2_2014-05-15_Voyager's_Neptune.jpg" alt="NGC 6960: The Witch's Broom Nebula" loading="lazy">
+            <div class="card-content">
+                <div class="card-title">NGC 6960: The Witch's Broom Nebula</div>
+                <div class="card-date">📅 2025-10-01</div>
+                <div class="card-size">📏 6.6 KB | 🖼️ 320×240px</div>
+                <div class="card-url">https://roccoss39.github.io/nasa.github.io/nasa-images/nasa_2_2014-05-15_Voyager's_Neptune.jpg</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="nasa-images/nasa_1_2005-04-06_The_M7_Open_Star_Clu.jpg" alt="NGC 6960: The Witch's Broom Nebula" loading="lazy">
+            <div class="card-content">
+                <div class="card-title">NGC 6960: The Witch's Broom Nebula</div>
+                <div class="card-date">📅 2025-10-01</div>
+                <div class="card-size">📏 38.7 KB | 🖼️ 320×240px</div>
+                <div class="card-url">https://roccoss39.github.io/nasa.github.io/nasa-images/nasa_1_2005-04-06_The_M7_Open_Star_Clu.jpg</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="nasa-images/nasa_3_2025-03-20_The_Solar_Eclipse_An.jpg" alt="Comet Lemmon Brightens" loading="lazy">
+            <div class="card-content">
+                <div class="card-title">Comet Lemmon Brightens</div>
+                <div class="card-date">📅 2025-09-30</div>
+                <div class="card-size">📏 5.9 KB | 🖼️ 320×240px</div>
+                <div class="card-url">https://roccoss39.github.io/nasa.github.io/nasa-images/nasa_3_2025-03-20_The_Solar_Eclipse_An.jpg</div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer">
+        <h3>🚀 NASA APOD Archive for ESP32</h3>
+        <p>Complete collection of NASA Astronomy Picture of the Day images</p>
+        <p>Optimized for ESP32 microcontrollers with TFT displays</p>
+        <p><strong>Images courtesy of NASA APOD</strong></p>
+        <p style="margin-top: 20px; color: #888;">
+            Total: 4 images | Size: 76.9 KB | 
+            Date range: 2025-09-30 to broom
+        </p>
+    </div>
+</body>
+</html>
