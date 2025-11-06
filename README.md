@@ -98,3 +98,4 @@ Images courtesy of NASA APOD. See individual image credits on the NASA APOD webs
 **ESP32 Ready**: ✅  
 **GitHub Pages**: ✅  
 
+<!-- Trigger GitHub Pages rebuild czw, 6 lis 2025, 22:33:10 CET -->
